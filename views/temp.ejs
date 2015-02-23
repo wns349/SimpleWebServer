@@ -3,6 +3,22 @@
   <head>
     <title>WNS349</title>
     <% include lib %>
+    
+    <script>
+      var files = '<%= files %>';
+      var f = files.split(',');
+      $(document).ready(function(){
+        for(var i = 0; i < f.length; i++){
+  
+            var aLink = $("<a></a>");
+            aLink.attr('href', '/temp/'+f[i]);
+            aLink.text('/temp/'+f[i]);
+            $('#folders').append(aLink);
+            $('#folders').append($("<br></br>"));
+        }
+      });
+      
+    </script>
   </head>
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -19,11 +35,11 @@
     </div>
     <div class="container">
       <div class="row">
-        <h1>Welcome</h1>
+        <h1>D:/Temp/ files</h1>
       </div>
       <div class="row">
         <div id="folders">
-            <a href="/temp">Temp</a>
+          
         </div>
       </div>
     </div>
