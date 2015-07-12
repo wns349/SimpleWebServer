@@ -1,0 +1,12 @@
+{
+    "routes": [
+        {
+            "get": "/temp",
+            "dir": "D:\\Temp\\"
+        },
+		{
+			"get": "/temp/dist",
+			"dir": "D:\\Temp\\dist\\"
+		}
+    ]
+}
